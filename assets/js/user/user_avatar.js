@@ -23,6 +23,7 @@ $(function () {
   $('#file').on('change', function (e) {
     // 获取用户选择的文件
     var filelist = e.target.files
+    // console.log(filelist);
     if (filelist.length === 0) {
       return layer.msg('请选择照片！')
     }
@@ -31,6 +32,7 @@ $(function () {
     var file = e.target.files[0]
     // 2. 将文件，转化为路径
     var imgURL = URL.createObjectURL(file)
+    // console.log(imgURL);
     // 3. 重新初始化裁剪区域
     $image
       .cropper('destroy') // 销毁旧的裁剪区域
