@@ -14,4 +14,8 @@ $.ajaxPrefilter(function (options) {
     }
   }
 })
+
+document.onkeydown = function (e) {
+  if (e.keyCode == 13) return false
+}
 // http://api-breakingnews-web.itheima.net
